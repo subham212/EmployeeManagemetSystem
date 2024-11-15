@@ -104,7 +104,7 @@
     </style>
 </head>
 <body>
-	<form action="<%= request.getContextPath() %>updateEmployeeSalary?action=edit" method="post">
+	<form action="<%= request.getContextPath() %>/updateEmployeeSalary?action=edit" method="post">
     <div class="container">
             <div class="form-group">
                 <label for="name">Enter Name:</label>
