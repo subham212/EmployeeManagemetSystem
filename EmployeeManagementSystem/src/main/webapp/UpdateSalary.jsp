@@ -69,7 +69,7 @@ color: red;
     } 
 %>
 
-  <form action="updateEmployeeSalary?action=update&empId=${empid}&Name=${name}" method="post">
+  <form action="<%= request.getContextPath() %>/updateEmployeeSalary?action=update&empId=${empid}&Name=${name}" method="post">
       <div>
         <label for="name">Employee Name</label>
         <input type="text" name="name" value="${name}" id="name" required/>
