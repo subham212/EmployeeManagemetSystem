@@ -1,12 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
- <title>Employee Salary Management</title>
+<title>employee </title>
+</head>
 <style>
-        body {
+    body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             margin: 0;
@@ -42,12 +43,11 @@
         .button:hover {
             background: #0056b3;
         }
-    </style>
-</head>
+</style>
 <body>
-	  <div class="container">
-	   <h1>Add Salary</h1>
-        <a href="<%= request.getContextPath() %>/empSalary" class="button">Add Salary</a>
+ 	<div class="container">
+    	<h1>Manage Employees</h1>
+    	<a href="AddEmployee2.jsp" class="button">Add Employee</a>
     </div>
 </body>
 </html>

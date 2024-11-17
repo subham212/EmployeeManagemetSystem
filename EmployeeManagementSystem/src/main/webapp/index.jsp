@@ -173,8 +173,7 @@
         <nav class="container">
             <div class="logo">EMS</div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#testimonial">Testimonial</a>
+                <a href="login.jsp">Admin Panel</a>
        
             </div>
         </nav>
@@ -221,7 +220,7 @@
             <div class="container">
                 <div class="testimonial-content">
                     <p>"The Employee Management System has revolutionized our HR processes. It's user-friendly, efficient, and has significantly improved our productivity."</p>
-                    <p class="testimonial-author">- Jane Doe, HR Manager</p>
+                    <p class="testimonial-author">- Jane Doe -</p>
                 </div>
             </div>
         </section>

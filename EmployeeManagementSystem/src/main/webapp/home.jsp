@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
+        /* General Reset and Styling */
         * {
             margin: 0;
             padding: 0;
@@ -16,21 +17,31 @@
 
         body {
             display: flex;
+            min-height: 100vh;
             background-color: #f0f2f5;
         }
 
+        /* Sidebar Styling */
         .sidebar {
             width: 250px;
             height: 100vh;
             background-color: #2c3e50;
             padding: 20px;
             color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .logo {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
         }
 
         .menu-item {
@@ -49,6 +60,7 @@
             margin-right: 10px;
         }
 
+        /* Main Content Styling */
         .content {
             flex: 1;
             padding: 20px;
@@ -66,6 +78,7 @@
             gap: 20px;
         }
 
+        /* Card Styling */
         .card {
             background-color: #fff;
             border-radius: 10px;
@@ -73,6 +86,8 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
         }
 
         .card:hover {
@@ -99,56 +114,68 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">EMS</div>
-        <div class="menu-item"><i class='bx bxs-dashboard'></i> Dashboard</div>
-        <div class="menu-item"><i class='bx bxs-user-detail'></i> Employees</div>
-        <div class="menu-item"><i class='bx bx-money'></i> Payroll</div>
-        <div class="menu-item"><i class='bx bx-calendar'></i> Attendance</div>
-        <div class="menu-item"><i class='bx bx-cog'></i> Settings</div>
-    </div>
-    <div class="content">
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <div>
+            <div class="logo">EMS</div>
+            <ul class="menu">
+                <li class="menu-item"><i class='bx bxs-dashboard'></i> Dashboard</li>
+                <a href="attendance.jsp" style="text-decoration: none; color: inherit;">
+                <li class="menu-item"><i class='bx bx-cog'></i> Attendance</li></a>
+                <a href="aboutUs.jsp" style="text-decoration: none; color: inherit;">
+                <li class="menu-item"><i class='bx bx-cog'></i> AboutUs</li></a>
+           </ul>
+        </div>
+        <footer>
+            <p style="text-align: center; font-size: 14px;">&copy; 2024 EMS</p>
+        </footer>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="content">
         <h1>Employee Management System</h1>
         <div class="grid">
-            <div class="card">
+            <a href="<%=request.getContextPath()%>/employee?action=view" class="card">
                 <i class='bx bx-user'></i>
                 <h2>View Employees</h2>
-                <p>Browse and manage employee records</p>
-            </div>
-            <div class="card">
-            <a href="AddEmp.jsp" style="text-decoration: none">
+                <p>Browse and view employee records</p>
+            </a>
+            <a href="empindex.jsp" class="card">
                 <i class='bx bx-user-plus'></i>
                 <h2>Add Employee</h2>
                 <p>Create a new employee profile</p>
-            </div>
-            <div class="card">
+            </a>
+            <a href="deleteEmployee.jsp" class="card">
                 <i class='bx bx-user-minus'></i>
                 <h2>Delete Employee</h2>
                 <p>Remove an employee from the system</p>
-            </div>
-            <div class="card">
+            </a>
+            <a href="updateEmployee.jsp" class="card">
                 <i class='bx bx-edit'></i>
                 <h2>Update Employee</h2>
                 <p>Modify existing employee information</p>
-            </div>
-            <div class="card">
-                <a href="manageSalary.jsp" style="text-decoration: none">
+            </a>
+            <a href="manageSalary.jsp" class="card">
                 <i class='bx bx-money'></i>
-                <h2>Salary Management</h2>
-                <p>Set up salary for new employees</p>
-            </div>
-            <div class="card">
-                <a href="attendance.jsp" style="text-decoration: none">
+                <h2>Add Salary</h2>
+                <p>Set up salary for employees</p>
+            </a>
+                <a href="UpdateSalary.jsp" class="card">
                 <i class='bx bx-money'></i>
+                <h2>Update Salary</h2>
+                <p>Update salary for employees</p>
+            </a>
+            <a href="attendance.jsp" class="card">
+                <i class='bx bx-calendar'></i>
                 <h2>Attendance Management</h2>
-                <p>Set up salary for new employees</p>
-            </div>
-            <div class="card">
-                <i class='bx bx-edit'></i>
+                <p>Track and manage employee attendance</p>
+            </a>
+            <a href="aboutUs.jsp" class="card">
+                <i class='bx bx-info-circle'></i>
                 <h2>About Us</h2>
-                <p>Modify existing employee information</p>
-            </div>
+                <p>Learn more about our system</p>
+            </a>
         </div>
-    </div>
+    </main>
 </body>
 </html>
