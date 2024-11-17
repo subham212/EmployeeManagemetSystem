@@ -46,7 +46,7 @@
 </style>
 <body>
  	<div class="container">
-    	<h1>Manage Employees</h1>
+    	<h1>Add Employees</h1>
     	<a href="AddEmployee2.jsp" class="button">Add Employee</a>
     </div>
 </body>
